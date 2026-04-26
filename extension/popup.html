@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+    <title>convert2md</title>
+  </head>
+  <body>
+    <header>
+      <h1>convert2md</h1>
+      <button id="open-options" type="button" class="ghost" title="Settings" aria-label="Settings">⚙</button>
+    </header>
+
+    <section id="tab-preview">
+      <img id="favicon" alt="" />
+      <div>
+        <div id="tab-title" class="title"></div>
+        <div id="tab-domain" class="domain"></div>
+      </div>
+    </section>
+
+    <section id="restricted-banner" hidden>
+      <p id="restricted-reason"></p>
+    </section>
+
+    <section id="actions">
+      <button id="save" type="button" class="primary">Save Markdown</button>
+      <button id="copy" type="button" class="primary">Copy</button>
+      <button id="ai-extract" type="button" class="primary" title="Screenshot the visible page and ask Gemini to transcribe it">AI Extract</button>
+    </section>
+
+    <details id="more">
+      <summary>More</summary>
+      <div class="field">
+        <label for="filename">Filename</label>
+        <input id="filename" type="text" autocomplete="off" spellcheck="false" />
+      </div>
+      <label class="check"><input id="include-images" type="checkbox" /> Include images (inline as data URIs)</label>
+    </details>
+
+    <section id="status" aria-live="polite"></section>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+{
+  "manifest_version": 3,
+  "name": "convert2md",
+  "short_name": "convert2md",
+  "version": "0.1.0",
+  "description": "Clip auth-gated web pages to Markdown. Preserves images for LLM context.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "convert2md — clip to Markdown"
+  },
+  "background": {
+    "service_worker": "sw.js",
+    "type": "module"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["prompts/*.md"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "contextMenus",
+    "scripting",
+    "downloads",
+    "tabs",
+    "offscreen",
+    "storage"
+  ],
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "convert2md-extension",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test *.test.js",
+    "lint": "node --check popup.js && node --check sw.js && node --check extract.js && node --check md.js && node --check offscreen.js && node --check gemini.js && node --check options.js",
+    "build": "../scripts/package-extension.sh"
+  },
+  "devDependencies": {
+    "happy-dom": "^20.9.0"
+  }
+}

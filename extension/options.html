@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+    <title>convert2md — Settings</title>
+  </head>
+  <body class="options">
+    <header>
+      <h1>convert2md</h1>
+      <p class="muted">Gemini for AI Extract and image descriptions</p>
+    </header>
+
+    <section class="fields">
+      <div class="field">
+        <label for="api-key">Google API key</label>
+        <input
+          id="api-key"
+          type="password"
+          autocomplete="off"
+          spellcheck="false"
+          placeholder="AIza…"
+        />
+        <p class="hint">
+          Get one at
+          <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener">
+            aistudio.google.com/app/apikey</a>. Stored in chrome.storage.local
+          on this device only.
+        </p>
+      </div>
+
+      <div class="field">
+        <label for="model">Model</label>
+        <input id="model" type="text" autocomplete="off" spellcheck="false" />
+      </div>
+
+      <div class="field">
+        <label for="concurrency">Concurrency (parallel Gemini calls)</label>
+        <input id="concurrency" type="number" min="1" max="32" />
+      </div>
+    </section>
+
+    <section id="actions">
+      <button id="save" type="button" class="primary">Save &amp; validate</button>
+      <button id="clear" type="button">Clear key</button>
+    </section>
+
+    <section id="status" aria-live="polite"></section>
+
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

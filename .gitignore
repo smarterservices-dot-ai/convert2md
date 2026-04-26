@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[oc]
+*.egg-info
+build/
+dist/
+wheels/
+
+# Virtual environments
+.venv
+
+# Caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Node
+extension/node_modules/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Secrets
+.env
+
+# Local-only shallow clones of third-party repos used for code-gen evidence
+# during development. See docs/references/README.md. Never commit the clones.
+docs/references/*/
+!docs/references/README.md
+
+# Output
+out.md
